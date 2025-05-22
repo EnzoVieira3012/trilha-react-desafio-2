@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+# **Wiki de Repositórios do GitHub**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto é uma **wiki de repositórios** desenvolvida em **React**, onde é possível buscar, listar e gerenciar repositórios do GitHub. A aplicação consome a API oficial do GitHub para exibir informações sobre os repositórios de interesse.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **📋 Funcionalidades**
 
-### `npm start`
+- **Buscar repositórios** no formato `usuário/repositório`.
+- **Listar os repositórios encontrados**.
+- **Remover repositórios** da lista.
+- **Salvar os repositórios no navegador** para persistência dos dados.
+- **Alternar entre temas claro e escuro (personalizável)**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **🚀 Tecnologias Utilizadas**
 
-### `npm test`
+As principais tecnologias e bibliotecas utilizadas no desenvolvimento deste projeto são:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **[React](https://reactjs.org/)**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **[Axios](https://axios-http.com/)**: Para fazer requisições HTTP à API do GitHub.
+- **[Styled-Components](https://styled-components.com/)**: Para estilização dinâmica dos componentes.
+- **JavaScript (ES6+)**: Para manipulação da lógica e interação com a API.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **📂 Estrutura do Projeto**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+A estrutura do projeto foi organizada da seguinte forma:
+/src
+├── /assets # Imagens e ícones
+│ └── github.png # Logo do GitHub utilizada na aplicação
+├── /components # Componentes reutilizáveis
+│ ├── /Button # Botão de busca
+│ │ ├── Button.jsx
+│ │ └── styles.js
+│ ├── /Input # Campo de entrada
+│ │ ├── Input.jsx
+│ │ └── styles.js
+│ ├── /ItemRepo # Item da lista de repositórios
+│ ├── ItemRepo.jsx
+│ └── styles.js
+├── /pages
+│ └── App.jsx # Página principal da aplicação
+├── /services
+│ └── api.js # Configuração da API do GitHub
+├── /styles
+│ ├── global.js # Estilos globais
+│ └── styles.js # Estilos de layout e do container
+└── index.js # Ponto de entrada da aplicação
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+plaintext
+Copy
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## **📦 Como Rodar o Projeto**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga os passos abaixo para clonar e rodar o projeto localmente:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **Pré-requisitos**
+- **Node.js** instalado (versão 14 ou superior).
+- Um gerenciador de pacotes: **npm** ou **yarn**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **Passo a Passo**
 
-## Learn More
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/github-wiki.git
+   cd github-wiki
+Instale as dependências:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+bash
+Copy
+npm install
+# ou, se você usar yarn:
+yarn install
+Inicie o servidor de desenvolvimento:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bash
+Copy
+npm start
+# ou
+yarn start
+Abra o navegador:
 
-### Code Splitting
+O projeto será executado em: http://localhost:3000.
+🔧 Como Usar
+Buscar repositórios:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Digite o nome do repositório no formato usuário/repositório (por exemplo, facebook/react) no campo de busca.
+Clique no botão "Buscar" para adicionar o repositório à lista.
+Remover repositórios:
 
-### Analyzing the Bundle Size
+Clique no link "Remover" para excluir um repositório da lista.
+Persistência dos dados:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Os repositórios adicionados à lista serão salvos no navegador e permanecerão disponíveis mesmo após recarregar a página.
+🖼️ Screenshots
+Tela Inicial
+(Adicione uma imagem da tela inicial funcionando)
 
-### Making a Progressive Web App
+Busca de Repositórios
+(Adicione uma imagem com a busca de repositórios funcionando)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📚 Aprendizados
+Durante o desenvolvimento deste projeto, foram aplicados conceitos importantes como:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Consumo de APIs REST com Axios.
+Utilização do React Hooks (useState, useEffect).
+Estilização dinâmica com Styled-Components.
+Manipulação de estado e persistência de dados no LocalStorage.
+Boas práticas de organização de arquivos em um projeto React.
+🔗 Links
+Documentação da API do GitHub: https://docs.github.com/en/restOpens in a new window; external.
+Repositório no GitHub: https://github.com/seu-usuario/github-wikiOpens in a new window; external.
+⚖️ Licença
+Este projeto está sob a licença MIT. Veja o arquivo LICENSEOpens in a new window; external. para mais detalhes.
